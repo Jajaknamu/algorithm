@@ -1,0 +1,18 @@
+public class Solution {
+
+    public int solution(int chicken) {
+        int result = 0;
+
+        while (chicken >= 10) {
+            result += chicken / 10;
+            chicken = (chicken % 10) + (chicken / 10);
+
+            if(chicken == 0){
+                break;
+            }
+        }
+
+
+        return result;
+    }
+}
