@@ -1,3 +1,5 @@
+//내가 푼 풀이
+
 class Solution {
     public boolean solution(String s) {
 
@@ -28,5 +30,32 @@ class Solution {
             if (count0 == count1) return true;
         }
         return false;
+    }
+}
+
+
+//정답 풀이
+
+class Solution {
+    public boolean solution(String s) {
+        int balance = 0; // 괄호의 균형을 맞출 카운터 (시작점은 0)
+
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+
+            if (c == '(') {
+                balance++; // 열리면 +1
+            } else {
+                balance--; // 닫히면 -1
+            }
+
+            // 닫는 괄호 너무 많다면
+            if (balance < 0) {
+                return false; // 짝 안맞으면 false 반환
+            }
+        }
+
+        // 짝이 다 맞으면 true
+        return balance == 0;
     }
 }
