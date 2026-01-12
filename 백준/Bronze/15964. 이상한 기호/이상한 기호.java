@@ -6,14 +6,14 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) throws IOException {
         Scanner sc = new Scanner(System.in);
-        int A = sc.nextInt();
-        int B = sc.nextInt();
-        int result = Fun(A, B);
+        Long A = sc.nextLong();
+        Long B = sc.nextLong();
+        Long result = Fun(A, B);
 
         System.out.println(result);
     }
 
-    public static int Fun(int A, int B) {
+    public static Long Fun(Long A, Long B) {
         return (A + B) * (A - B);
     }
 }
